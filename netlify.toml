@@ -1,0 +1,24 @@
+# Configuration Netlify pour redirection vers Bolt Hosting
+[build]
+  publish = "dist"
+  command = "echo 'Redirecting to Bolt Hosting'"
+
+# Redirection principale du domaine personnalisé vers Bolt Hosting
+[[redirects]]
+  from = "https://jobshare.joyeds.com/*"
+  to = "https://job-share-applicatio-l0dx.bolt.host/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "https://job-share-applicatio-l0dx.bolt.host/:splat"
+  status = 301
+  force = true
+
+# Headers de sécurité pour les redirections
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+    Cache-Control = "no-cache"

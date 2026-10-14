@@ -1,0 +1,3 @@
+# Redirections Netlify vers Bolt Hosting
+https://jobshare.joyeds.com/* https://job-share-applicatio-l0dx.bolt.host/:splat 301!
+/* https://job-share-applicatio-l0dx.bolt.host/:splat 301!
